@@ -1,0 +1,399 @@
+/* ============================================
+   HOME LAYOUT
+   ============================================ */
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    align-items: stretch;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero-horizontal {
+    background: linear-gradient(135deg, #8B0000, #C1121F);
+    padding: 1.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    margin-bottom: 2.5rem;  /* ← ESPACIO ENTRE CATEGORÍAS Y ENVÍO */
+}
+
+/* ============================================
+   CATEGORÍAS
+   ============================================ */
+.hero-categories {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.category-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.category-circle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.08);
+    border-color: white;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.category-circle-icon {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.category-circle-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* ============================================
+   BANNER DE ENVÍO
+   ============================================ */
+.hero-shipping {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #8B0000;
+    padding: 0.8rem 0;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.shipping-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.shipping-icon {
+    font-size: 2rem;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+.shipping-text {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+/* ============================================
+   CARRUSEL
+   ============================================ */
+.hero-slider-horizontal {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    margin-top: 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+    min-width: 100%;
+    width: 100%;
+    position: relative;
+    aspect-ratio: auto;
+    min-height: 200px;
+    max-height: 350px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== OVERLAY SOBRE LA IMAGEN ===== */
+.slider-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    border-left: 4px solid #C1121F;
+}
+
+.slider-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slider-subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.2rem 0 0 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== INDICADORES (DOTS) ===== */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0 0.4rem 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.slider-dot.active {
+    background: white;
+    transform: scale(1.2);
+    border-color: white;
+}
+
+.slider-dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   LOADING Y ERROR
+   ============================================ */
+.loading-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 2rem;
+}
+
+.error-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.error-screen .btn-primary {
+    background: #C1121F;
+    color: white;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.error-screen .btn-primary:hover {
+    background: #8B0000;
+    transform: scale(1.02);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-horizontal {
+        padding: 1rem 0 0 0;
+    }
+
+    .hero-inner {
+        gap: 1rem;
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .category-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .category-circle-icon {
+        font-size: 1.8rem;
+    }
+
+    .category-circle-name {
+        font-size: 0.55rem;
+    }
+
+    .hero-categories {
+        gap: 1rem;
+    }
+
+    .shipping-icon {
+        font-size: 1.5rem;
+    }
+
+    .shipping-text {
+        font-size: 1rem;
+    }
+
+    .slider-slide {
+        min-height: 150px;
+        max-height: 350px;
+    }
+
+    .slider-overlay {
+        padding: 0.6rem 1rem;
+    }
+
+    .slider-title {
+        font-size: 1rem;
+    }
+
+    .slider-subtitle {
+        font-size: 0.75rem;
+    }
+
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-horizontal {
+        padding: 0.8rem 0 0 0;
+    }
+
+    .hero-inner {
+        gap: 0.8rem;
+        padding: 0 0.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .category-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .category-circle-icon {
+        font-size: 1.5rem;
+    }
+
+    .category-circle-name {
+        font-size: 0.45rem;
+    }
+
+    .hero-categories {
+        gap: 0.8rem;
+    }
+
+    .shipping-icon {
+        font-size: 1.2rem;
+    }
+
+    .shipping-text {
+        font-size: 0.8rem;
+    }
+
+    .slider-slide {
+        min-height: 120px;
+        max-height: 250px;
+    }
+
+    .slider-overlay {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .slider-title {
+        font-size: 0.85rem;
+    }
+
+    .slider-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .slider-dots {
+        padding: 0.3rem 0 0.2rem 0;
+    }
+
+    .slider-dot {
+        width: 6px;
+        height: 6px;
+    }
+}

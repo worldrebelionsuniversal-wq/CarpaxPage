@@ -1,0 +1,79 @@
+/* frontend/admin/src/styles/AdminHeader.css */
+.admin-header {
+    height: var(--header-height);
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    right: 0;
+    z-index: 99;
+}
+
+.admin-header-left h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.admin-header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #555;
+    position: relative;
+    cursor: pointer;
+    padding: 0.3rem;
+    transition: all 0.3s ease;
+}
+
+.header-icon-btn:hover {
+    color: #1a1a1a;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #1a1a1a;
+    color: white;
+    font-size: 0.6rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 50%;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+}
+
+.user-icon {
+    font-size: 1.5rem;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .admin-header {
+        left: 60px;
+        padding: 0 1rem;
+    }
+    .admin-header-left h2 {
+        font-size: 0.95rem;
+    }
+    .admin-user span {
+        display: none;
+    }
+}

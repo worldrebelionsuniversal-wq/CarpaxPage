@@ -1,0 +1,381 @@
+/* ============================================
+   CHECKOUT MODAL - ESTILOS COMPLETOS
+   ============================================ */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 850px;
+    width: 100%;
+    max-height: 95vh;
+    overflow-y: auto;
+    padding: 1.5rem 2rem 2rem;
+    animation: modalFadeIn 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #dc143c;
+}
+
+.modal-header h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.3rem;
+}
+
+.modal-close:hover {
+    color: #dc143c;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.modal-left {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #a5d6a7;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mensaje-box {
+    text-align: center;
+    width: 100%;
+}
+
+.mensaje-icon {
+    font-size: 3.5rem;
+    color: #25D366;
+    margin-bottom: 0.8rem;
+}
+
+.mensaje-box h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1b5e20;
+    margin: 0 0 0.5rem 0;
+}
+
+.mensaje-texto {
+    font-size: 0.9rem;
+    color: #2e7d32;
+    line-height: 1.5;
+    margin: 0.3rem 0;
+}
+
+.mensaje-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 1rem 0;
+    text-align: left;
+    padding: 0 0.5rem;
+}
+
+.mensaje-beneficio {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: #1b5e20;
+}
+
+.mensaje-beneficio svg {
+    color: #25D366;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.mensaje-footer {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed #a5d6a7;
+}
+
+.mensaje-footer p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+}
+
+.modal-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.form-icon {
+    color: #dc143c;
+    font-size: 0.85rem;
+}
+
+.required {
+    color: #dc143c;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.5rem 0.8rem;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #dc143c;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
+}
+
+.form-group-conjunto {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1.5px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background: #f5f5f5;
+    border-color: #ccc;
+}
+
+.btn-confirm {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background: #25D366;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.btn-confirm:hover {
+    background: #1da851;
+    transform: scale(1.01);
+}
+
+.btn-confirm:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 1rem 1.2rem;
+        max-height: 98vh;
+        margin: 0.5rem;
+        max-width: 100%;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .modal-left {
+        padding: 1rem;
+        order: 2;
+    }
+
+    .modal-right {
+        order: 1;
+        height: auto;
+    }
+
+    .modal-form {
+        justify-content: flex-start;
+    }
+
+    .mensaje-icon {
+        font-size: 2.5rem;
+    }
+
+    .mensaje-box h3 {
+        font-size: 1rem;
+    }
+
+    .mensaje-texto {
+        font-size: 0.85rem;
+    }
+
+    .mensaje-beneficios {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .mensaje-beneficio {
+        font-size: 0.75rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        margin-top: 0.5rem;
+    }
+
+    .btn-cancel,
+    .btn-confirm {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 0.8rem;
+        border-radius: 10px;
+    }
+
+    .modal-body {
+        gap: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .form-group label {
+        font-size: 0.75rem;
+    }
+
+    .mensaje-beneficios {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .mensaje-icon {
+        font-size: 2rem;
+    }
+
+    .btn-cancel,
+    .btn-confirm {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+}
