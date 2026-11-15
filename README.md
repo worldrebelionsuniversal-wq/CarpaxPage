@@ -1,7 +1,9 @@
+# CarpaxPage
+
+Pagina de venta comercial carpax
 
 ```
 carpaPage
-├─ .env
 ├─ .oxlintrc.json
 ├─ backend
 │  ├─ admin
